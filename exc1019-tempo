@@ -1,0 +1,15 @@
+import java.io.IOException;
+import java.util.Scanner;
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 		Scanner input = new Scanner(System.in);
+		
+		int tempo = input.nextInt();
+			
+			System.out.println(tempo/3600+":"+((tempo%3600)/60)+":"+((tempo%3600)%60));
+			
+		
+	}
+
+}
