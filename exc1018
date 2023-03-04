@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.util.Scanner;
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		Scanner input = new Scanner(System.in);
+		
+		int valorI = input.nextInt();
+			System.out.println(valorI);
+		int nota100 = (valorI/100);
+			System.out.println(nota100+" nota(s) de R$ 100,00");
+		int nota50 = ((valorI%100)/50);
+			System.out.println(nota50+" nota(s) de R$ 50,00");
+		int nota20 = ((((valorI%100)%50))/20);
+			System.out.println(nota20+" nota(s) de R$ 20,00");
+		int nota10 = (((((valorI%100)%50))%20)/10);
+			System.out.println(nota10+" nota(s) de R$ 10,00");
+		int nota5 = ((((((valorI%100)%50))%20)%10)/5);
+			System.out.println(nota5+" nota(s) de R$ 5,00");
+		int nota2 = ((((((valorI%100)%50))%20)%10)%5)/2;
+			System.out.println(nota2+" nota(s) de R$ 2,00");
+		int nota1 = ((((((((valorI%100)%50))%20)%10)%5)%2)/1);
+			System.out.println(nota1+" nota(s) de R$ 1,00");
+		
+	}
+
+}
