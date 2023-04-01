@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class escolhas 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		char sexo;
+		String nome, estadoCivil;
+		int anosCasada;
+		
+		System.out.println("Informe seu nome: ");
+		nome = input.nextLine();
+		System.out.println("Informe seu sexo(M/F): ");
+		sexo = input.next().charAt(0);
+		input.nextLine();
+		
+		if	(sexo != 'F' && sexo != 'M') 
+		{
+			System.out.println("invalido");
+		}
+		System.out.println("Informe estado civil(CASADO/CASADA/SOLTEIRO/SOLTEIRA): ");
+		estadoCivil = input.nextLine();
+		
+		if	(sexo == 'F' && estadoCivil == "CASADA")
+		{
+			System.out.println("Quantos anos de casada? ");
+			anosCasada = input.nextInt();
+			System.out.println("Seja bem vindo senhora" + nome + ". Parabens pelos " + anosCasada + "anos de casada.");
+		}
+		else if (sexo == 'F' && estadoCivil != "CASADA")
+		{
+			System.out.println("Seja bem vindo senhotita " + nome);
+		}
+		else 
+		{
+			System.out.println("Seja bem vindo senhor " + nome);
+		}
+		
+		input.close();
+	}
+
+}
